@@ -39,7 +39,7 @@ class MonitoringCog(commands.Cog):
         
         # Unload data
         cpu = data["cpu"]
-        mem = data["mem"]
+        mem = data["memory"]
         disk = data["disk"]
         
         # Check if cpu or memory usage is above threshold
@@ -74,7 +74,7 @@ class MonitoringCog(commands.Cog):
         # Get cpu, memory and disk usage percentage
         data = await get_host_usage(f"{settings.host_url}/usage")
         cpu = data["cpu"]
-        mem = data["mem"]
+        mem = data["memory"]
         disk = data["disk"]
 
         # Send status message
