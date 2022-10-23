@@ -43,7 +43,7 @@ class MonitoringCog(commands.Cog):
         disk = data["disk"]
         
         # Check if cpu or memory usage is above threshold
-        if cpu > settings.cpu_threshold or mem > settings.mem_threshold:
+        if cpu >= settings.cpu_threshold or mem >= settings.mem_threshold:
             log(f"Sent alert for: CPU: {cpu}% | MEM: {mem}% | Disk: {disk}%")
 
             # Create alert message
